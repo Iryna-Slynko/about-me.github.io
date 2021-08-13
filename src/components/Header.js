@@ -16,7 +16,7 @@ export default function Header(props) {
         var description = props.data.description;
         var city = props.data.address.city;
         var networks = props.data.social.map(function (network) {
-            return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
+            return <li key={network.name}><a href={network.url}  target="_blank"><i className={network.className}></i></a></li>
         })
     }
 
