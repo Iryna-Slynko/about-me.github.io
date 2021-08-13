@@ -27,7 +27,7 @@ export default function Portfolio(props) {
             return (
                 <div key={projects.title} className="columns portfolio-item">
                 <Card className={classes.card}>
-                    <CardActionArea href={projects.url}>
+                    <CardActionArea href={projects.url} target="_blank">
                         <CardMedia className={classes.media} image={projectImage} title={projects.title} />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">{projects.title}</Typography>
