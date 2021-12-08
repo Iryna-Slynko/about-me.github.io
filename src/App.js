@@ -6,7 +6,10 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
-
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(fab, fas)
 class App extends Component {
     constructor(props) {
         super(props);

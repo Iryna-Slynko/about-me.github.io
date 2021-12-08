@@ -21,27 +21,27 @@
             {
                 "name": "twitter",
                 "url": "http://twitter.com/IRYNAS14/",
-                "className": "fa fa-twitter"
+                "className": [ "fab", "twitter" ]
             },
             {
                 "name": "linkedin",
                 "url": "https://www.linkedin.com/in/iryna-slynko/",
-                "className": "fa fa-linkedin"
+                "className": [ "fab","linkedin" ]
             },
             {
                 "name": "home",
                 "url": "https://iryna-slynko.com/",
-                "className": "fa fa-home"
+                "className": "home"
             },
             {
                 "name": "github",
                 "url": "https://github.com/Iryna-Slynko/",
-                "className": "fa fa-github"
+                "className":  ["fab", "github"]
             },
             {
                 "name": "medium",
                 "url": "https://medium.com/@iryna.slynko/",
-                "className": "fab fa-medium"
+                "className": ["fab", "medium"]
             }
         ]
     },
