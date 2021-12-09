@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Footer(props) {
 
     if (props.data) {
         var networks = props.data.social.map(function (network) {
-            return <li key={network.name}><a href={network.url}  target="_blank"><FontAwesomeIcon icon={network.className} /></a></li>
+            return <li key={network.name}><a href={network.url}  target="_blank" rel="noreferrer"><FontAwesomeIcon icon={network.className} /></a></li>
         })
     }
 

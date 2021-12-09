@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import ParticlesBg from "particles-bg";
 
 /**
@@ -10,14 +9,8 @@ import ParticlesBg from "particles-bg";
 export default function Header(props) {
     
     if (props.data) {
-        var project = props.data.project;
-        var github = props.data.github;
         var name = props.data.name;
         var description = props.data.description;
-        var city = props.data.address.city;
-        var networks = props.data.social.map(function (network) {
-            return <li key={network.name}><a href={network.url}  target="_blank"><i className={network.className}></i></a></li>
-        })
     }
 
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, CardActionArea, CardMedia, Typography, Grid, Container } from '@material-ui/core/';
+import { Card, CardContent, CardActionArea, CardMedia, Typography, Container } from '@material-ui/core/';
 
 const useStyles = makeStyles((theme) => ({
     root: {
