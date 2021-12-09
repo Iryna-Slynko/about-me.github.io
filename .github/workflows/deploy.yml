@@ -4,10 +4,43 @@ on:
   push:
     branches:
       - main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  CI: true
+
 jobs:
-  - name: Deploy with gh-pages
-    run: |
-      git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-      npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  run:
+    name: Node ${{ matrix.node }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        node:
+          - 16
+  steps:
+    - name: Clone repository
+      uses: actions/checkout@v2
+
+    - name: Set Node.js version
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+
+    - run: node --version
+    - run: npm --version
+    - name: Deploy with gh-pages
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
