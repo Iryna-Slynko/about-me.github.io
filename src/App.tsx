@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
+import Data from './Data'
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core';
@@ -18,29 +19,10 @@ class App extends Component<any, IState> {
   constructor(props) {
     super(props);
     this.state = {
-      resumeData: {},
+      resumeData: Data(),
     };
     ReactGA.initialize('UA-110570651-1');
     ReactGA.pageview(window.location.pathname);
-  }
-
-  getResumeData() {
-    $.ajax({
-      url: './resumeData.json',
-      dataType: 'json',
-      cache: false,
-      success: function(data) {
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.log(err);
-        alert(err);
-      },
-    });
-  }
-
-  componentDidMount() {
-    this.getResumeData();
   }
 
   render() {
