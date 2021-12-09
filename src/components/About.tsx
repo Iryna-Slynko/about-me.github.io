@@ -31,7 +31,7 @@ export default function About(props) {
                                     {city} {state}
                                 </span><br />
                                 <span>{phone}</span><br />
-                                <span>{email}</span>
+                                <span><a href={`mailto:${email}`}>{email}</a></span>
                             </p>
                         </div>
                         <div className="columns download">
