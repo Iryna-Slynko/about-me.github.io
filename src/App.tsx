@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ReactGA from 'react-ga';
-import $ from 'jquery';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -10,11 +9,13 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 library.add(fab, fas)
-class App extends Component {
+interface IState {
+    resumeData: any;
+}
+class App extends Component<any, IState>  {
     constructor(props) {
         super(props);
         this.state = {
-            foo: 'bar',
             resumeData: {}
         };
         ReactGA.initialize('UA-110570651-1');
@@ -27,7 +28,7 @@ class App extends Component {
             dataType: 'json',
             cache: false,
             success: function (data) {
-                this.setState({ resumeData: data });
+                this.setState({resumeData: data});
             }.bind(this),
             error: function (xhr, status, err) {
                 console.log(err);

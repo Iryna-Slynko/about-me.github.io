@@ -4,7 +4,7 @@ import './index.css';
 import theme from './theme';
 import { ThemeProvider } from '@material-ui/core';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
@@ -12,4 +12,4 @@ ReactDOM.render(
     </ThemeProvider>,
     document.getElementById('root'));
 
-registerServiceWorker();
+unregister();

@@ -18,12 +18,12 @@ const rawTheme = createTheme({
             dark: '#ffb25e',
         },
         error: {
-            xLight: red[50],
+            light: red[50],
             main: red[500],
             dark: red[700],
         },
         success: {
-            xLight: green[50],
+            light: green[50],
             main: green[500],
             dark: green[700],
         },
@@ -34,15 +34,13 @@ const rawTheme = createTheme({
         fontWeightLight: 500, // Work Sans
         fontWeightRegular: 400, // Work Sans
         fontWeightMedium: 500, // Roboto Condensed
-        fontWeightBold: 600,
-        fontFamilySecondary: "'Enriqueta', sans-serif",
+        fontWeightBold: 600
     },
 });
 
 const fontHeader = {
     color: rawTheme.palette.text.primary,
-    fontWeight: rawTheme.typography.fontWeightBold,
-    fontFamily: rawTheme.typography.fontFamilySecondary,
+    fontWeight: rawTheme.typography.fontWeightBold
 };
 
 const theme = {
@@ -102,10 +100,6 @@ const theme = {
         body2: {
             ...rawTheme.typography.body1,
             fontSize: 14,
-        },
-        p: {
-            ...rawTheme.typography.p,
-            fontSize: 17,
         }
     },
 };
